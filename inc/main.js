@@ -1,3 +1,11 @@
+/*******************************************************
+@ This JavaScript file is created
+@ For     : Hong Fok
+@ On      : 8th Oct 2012
+@ By      : Liu Kangning
+@ Email   : liukangning@gmail.com
+@ QQ      : 410532598
+********************************************************/
 
 var winWidth = $(window).width();
 var bro = $.browser;
