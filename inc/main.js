@@ -3,8 +3,9 @@
 @ For     : Hong Fok
 @ On      : 8th Oct 2012
 @ By      : Liu Kangning
-@ Email   : liukangning@gmail.com
 @ QQ      : 410532598
+@ Email   : liukangning@gmail.com
+@ Github  : https://github.com/decradish
 ********************************************************/
 
 var winWidth = $(window).width();
@@ -38,7 +39,7 @@ $(function() {
     $('.nav li.has_child').click(function(){
 		winWidth = $(window).width();
 
-    	if(winWidth <= 768 && !bro.msie){
+    	if(winWidth <= 768 && (!bro.msie || (bro.msie && bro.version >= 9)) ){
 	    	if($(this).children('ul').css('display') == 'none'){
 	    		$('.clicked').removeClass('clicked');
 				$('.nav li ul').hide();
