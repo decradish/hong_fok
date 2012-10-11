@@ -198,6 +198,7 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
 	            		color: #333333;
 	            		font: normal 14px/29px Helvetica, Arial, sans-serif;
 	            		text-decoration: none;
+	            		/*display: block;*/
 	            	}
 	            	.nav > li.has_child > a{
 	            		background: url('../im/nav_arrow.png') right 0 no-repeat;
@@ -291,6 +292,7 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
         			text-shadow: 2px 0px 5px #fff;
         			border-bottom: 2px solid #333;
         			text-transform: uppercase;
+        			/*filter: glow(color=white,strength=3), alpha(opacity=80);*/
         		}
         		.banner p{
         			font: normal 14px Tahoma, Arial, sans-serif;
@@ -377,6 +379,29 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
 				-moz-border-radius:    2px;
 				border-radius:         2px;
         	}
+        	.sub_content.simple_content{
+        		padding-left: 25px;
+        		min-height: 300px;
+        	}
+	        	.sub_content.simple_content .ctt_tab{display: none;}
+	        	.sub_content.simple_content .content_wrapper{
+	        		margin: 0;
+	        		padding: 0;
+	        	}
+	        		.contact_table{width: 100%;}
+	        		.contact_table td{
+	        			padding: 5px 0 5px 20px;
+	        			font-size: 14px;
+	        			vertical-align: top;
+	        			word-break:break-all;
+	        		}
+	        		.contact_table td:first-child{
+	        			text-align: right;
+	        			font-weight: bold;
+	        			padding-left: 0;
+	        			white-space:nowrap;
+	        		}
+
         		.ctt_tab{
         			list-style: none;
         			margin-left: -8px;
@@ -422,6 +447,13 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
         			border-bottom: 1px solid #be161b;
         			margin-bottom: 15px;
         		}
+        			.content_wrapper a{
+        				color: #BE161B;
+        				text-decoration: none;
+        			}
+        			.content_wrapper a:hover{
+        				text-decoration: underline;
+        			}
 
 
 
@@ -662,6 +694,9 @@ px      68    160    252    */
 	        	.sub_content{
 	        		margin: 0 5px 0;
 	        		padding: 0;
+	        	}
+	        	.sub_content.simple_content{
+	        		padding: 10px 25px 25px;
 	        	}
 	        		.content_wrapper{
 	        			margin: 0;

@@ -9,7 +9,7 @@
 ********************************************************/
 
 var winWidth = $(window).width();
-var bro = $.browser;
+var bro      = $.browser;
 
 $(function() {
 	$("a").bind("focus",function(){
@@ -36,35 +36,39 @@ $(function() {
 	    	}
 	    });
 
-    $('.nav li.has_child').click(function(){
+    $('.nav li.has_child > a').click(function(){
 		winWidth = $(window).width();
 
     	if(winWidth <= 768 && (!bro.msie || (bro.msie && bro.version >= 9)) ){
-	    	if($(this).children('ul').css('display') == 'none'){
+	    	if($(this).nextAll('ul').css('display') == 'none'){
 	    		$('.clicked').removeClass('clicked');
 				$('.nav li ul').hide();
 				$(this)
-					.addClass('clicked')
+					.parent().addClass('clicked')
 					.children('ul').show();
 	    	}else{
 				$(this)
-					.removeClass('clicked')
+					.parent().removeClass('clicked')
 					.children('ul').hide();
 			}
 		}
     });
 
+    /**********************************
+    @ Functions for tab in all subpages
+    ***********************************/
+    var sUrlPar = location.search;
+    var sPar    = sUrlPar.substr(1);
+    fnTab(sPar);
+
     var iCurrent = 0;
     $('.ctt_tab li').click(function(){
 		winWidth = $(window).width();
 
-    	if(winWidth >= 768 || bro.msie){
+    	if(winWidth >= 768 || (bro.msie && bro.version < 9) ){
     		iCurrent = $('.ctt_tab li').index(this);
-    		$('.ctt_tab li.current').removeClass('current');
-    		$(this).addClass('current');
 
-    		$('.tab_box.current').removeClass('current');
-    		$('.tab_box').eq(iCurrent).addClass('current');
+            fnTab(iCurrent);
     	}
     });
 
@@ -75,14 +79,17 @@ $(function() {
     	if(winWidth < 768){
     		iCurrentMobile = $('.content_wrapper h2').index(this);
 
-    		$('.ctt_tab li.current').removeClass('current');
-    		$('.ctt_tab li').eq(iCurrentMobile).addClass('current');
-
-    		$('.content_wrapper .tab_box.current').removeClass('current');
-    		$(this).parent().addClass('current');
-
-    		$('.tab_box.current').removeClass('current');
-    		$('.tab_box').eq(iCurrentMobile).addClass('current');
+    		fnTab(iCurrentMobile);
     	}
     });
 });
+
+function fnTab(key){
+    if( isNaN(key) ){
+        key = 0;
+    }
+
+    $('.ctt_tab li.current, .tab_box.current').removeClass('current');
+    $('.ctt_tab li').eq(key).addClass('current');
+    $('.tab_box').eq(key).addClass('current');
+}
