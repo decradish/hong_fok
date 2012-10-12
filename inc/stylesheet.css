@@ -157,6 +157,7 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
             }
 
             .search_wrapper{
+            	visibility: hidden;
             	float: right;
             	width: 279px;
             	margin-top: 10px;
