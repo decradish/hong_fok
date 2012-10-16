@@ -431,7 +431,8 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
 	        			width: 100%;
 	        		}
 	        		.contact_table.current{
-	        			display: block;
+	        			display: table;
+	        			*display: block;
 	        		}
 	        		.contact_table td{
 	        			padding: 5px 0 5px 20px;
@@ -455,6 +456,7 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
 
 	        		.tab_box img{
 	        			display: block;
+	        			position: relative;
 	        			margin: 10px auto 25px;
 
 						-webkit-box-shadow: #666 0px 0px 15px;

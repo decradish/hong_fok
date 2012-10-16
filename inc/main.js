@@ -195,7 +195,7 @@ function fuDestroyScroll(){
     }
 }
 function fnScroll(obj){
-    if(!$.browser.webkit && winWidth >= 768){
+    if(!bro.webkit && winWidth >= 768){
         fuDestroyScroll();
 
         // Loop over each scrollpane individually so we can
