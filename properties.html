@@ -8,8 +8,19 @@
             <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
             <script type="text/javascript" src="inc/pie.js"></script>
         <![endif]-->
+
+        <!-- styles needed by jScrollPane - include in your own sites -->
+        <link type="text/css" href="inc/jScrollPane/style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
         <link rel="stylesheet" media="all" href="inc/stylesheet.css"/>
-        <script type="text/javascript" src="inc/jquery-1.8.2.min.js"></script>
+
+        <!-- latest jQuery direct from google's CDN -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <!-- the mousewheel plugin -->
+        <script type="text/javascript" src="inc/jScrollPane/script/jquery.mousewheel.js"></script>
+        <!-- the jScrollPane script -->
+        <script type="text/javascript" src="inc/jScrollPane/script/jquery.jscrollpane.min.js"></script>
+
+        <!-- // <script type="text/javascript" src="inc/jquery-1.8.2.min.js"></script> -->
         <script type="text/javascript" src="inc/main.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
@@ -65,23 +76,240 @@
                         <div class="content_wrapper">
                             <div class="tab_box current">
                                 <h2><span>Ongoing</span></h2>
-                                <p><strong>Concourse Skyline</strong> at Beach Road, Singapore</p>
+                                <div class="p">
+                                    <table class="contact_table current">
+                                        <tr>
+                                            <th colspan="2">Concourse Skyline at Beach Road, Singapore</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Description:</td>
+                                            <td>A part 4 / part 7 -storey podium car park and apartments with 2 blocks of part 20/part 28-storey and part 34/part 40-storey residential flats with communal facilities</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Location:</td>
+                                            <td>Beach Road</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tenure:</td>
+                                            <td>99 years lease from 13/3/2008</td>
+                                        </tr>
+                                        <tr>
+                                            <td>No. of units:</td>
+                                            <td>360 units</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Size of units:</td>
+                                            <td>Typical unit : 72 sq m - 212 sq m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Penthouse:</td>
+                                            <td>304 sq m - 1028 sq m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Site area:</td>
+                                            <td>8,662 sq.m.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gross floor area:</td>
+                                            <td>46,529 sq.m.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date of completion:</td>
+                                            <td>December 2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <img src="im/pro_skyline.jpg" alt="">
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div><!-- /.p -->
                             </div><!-- /.tab_box -->
 
                             <div class="tab_box">
-                                <h2><span>Existing</span></h2>
-                                <p>
-                                    <strong>The Concourse</strong> at Beach Road, Singapore<br />
-                                    <strong>Jewel of Balmoral</strong> at Balmoral Park, Singapore<br />
-                                    <strong>ten@suffolk</strong> at Suffolk Road, Singapore<br />
-                                    <strong>Land</strong> at Claymore Hill, Singapore<br />
-                                    <strong>International Building</strong> at Orchard Road, Singapore<br />
-                                </p>
+                                <h2>
+                                    <a href="javascript:void(0);" class="see_all h2_a">See All</a>
+                                    <div class="h2_content">
+                                        <a href="javascript:void(0);" class="list_icon h2_a">Listing</a>
+                                        <a href="javascript:void(0);" class="pre_icon h2_a">Previous</a>
+                                        <a href="javascript:void(0);" class="next_icon h2_a">Next</a>
+                                    </div>
+                                    <span>Existing</span>
+                                </h2>
+                                <div class="p">
+                                    <h5>The Concourse at Beach Road, Singapore</h5>
+                                    <div class="clear"></div>
+                                    <table class="contact_table">
+                                        <tr>
+                                            <th colspan="2">The Concourse at Beach Road, Singapore</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Description:</td>
+                                            <td>A 41 storey office town block with a Cafe and 2 basements</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Location:</td>
+                                            <td>Beach Road, Singapore</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tenure:</td>
+                                            <td>99 years lease from 16/6/1980</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Existing use:</td>
+                                            <td>Offices / Shops / Residential</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Site area:</td>
+                                            <td>20,491 sq m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gross floor area:</td>
+                                            <td>105,917 sq m</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <img src="im/pro_concourse.jpg" alt="">
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <h5>Jewel of Balmoral at Balmoral Park, Singapore</h5>
+                                    <div class="clear"></div>
+                                    <table class="contact_table">
+                                        <tr>
+                                            <th colspan="2">Jewel of Balmoral at Balmoral Park, Singapore</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Description:</td>
+                                            <td>A 10-storey residential building</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Location:</td>
+                                            <td>Balmoral Park</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tenure:</td>
+                                            <td>Freehold</td>
+                                        </tr>
+                                        <tr>
+                                            <td>No. of units:</td>
+                                            <td>16 units</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Site area:</td>
+                                            <td>1,651 sq.m.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gross floor area:</td>
+                                            <td>1,250 sq.m.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date of completion:</td>
+                                            <td>2000</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <img src="im/pro_jewelofbalmoral.jpg" alt="">
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <h5>ten@suffolk at Suffolk Road, Singapore</h5>
+                                    <div class="clear"></div>
+                                    <table class="contact_table">
+                                        <tr>
+                                            <th colspan="2">ten@suffolk at Suffolk Road, Singapore</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Description:</td>
+                                            <td>A 15 storey residential building</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Location:</td>
+                                            <td>Suffolk Road</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tenure:</td>
+                                            <td>Freehold</td>
+                                        </tr>
+                                        <tr>
+                                            <td>No. of units:</td>
+                                            <td>37 units</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Size of Units:</td>
+                                            <td>2 bedrooms : 101, 104, 110 sq m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Penthouse:</td>
+                                            <td>204, 349 sq m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date of completion:</td>
+                                            <td>2007</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <img src="im/pro_tensuffolk.jpg" alt="">
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <h5>International Building at Orchard Road, Singapore</h5>
+                                    <div class="clear"></div>
+                                    <table class="contact_table">
+                                        <tr>
+                                            <th colspan="2">International Building at Orchard Road, Singapore</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Description:</td>
+                                            <td>A 12-storey commercial building</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Location:</td>
+                                            <td>Orchard Road, Singapore</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tenure:</td>
+                                            <td>Freehold</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Existing use:</td>
+                                            <td>Offices / Shops / Residential</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Site area:</td>
+                                            <td>4,224 sq m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gross floor area:</td>
+                                            <td>14,776 sq m</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <img src="im/pro_internationalbuilding.jpg" alt="">
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <h5>Land at Claymore Hill, Singapore</h5>
+                                    <div class="clear"></div>
+                                    <table class="contact_table">
+                                        <tr>
+                                            <th colspan="2">Land at Claymore Hill, Singapore</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">No Image Available</td>
+                                        </tr>
+                                    </table>
+                                </div><!-- /.p -->
                             </div><!-- /.tab_box -->
 
                             <div class="tab_box">
                                 <h2><span>Upcoming</span></h2>
-                                <p><!--Empty--></p>
+                                <div class="p"><!--Empty--></div>
                             </div><!-- /.tab_box -->
                         </div><!-- /.content_wrapper -->
 
