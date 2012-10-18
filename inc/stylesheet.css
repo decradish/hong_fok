@@ -405,7 +405,7 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
         	.sub_content{
         		/*float: left;*/
         		margin: 0 5px 0;
-        		padding: 25px 30px 25px 0;
+        		padding: 25px 20px 25px 0;
         		background: #f8fbfd;
         		position: relative;
 
@@ -435,10 +435,13 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
 	        			*display: block;
 	        		}
 	        		.contact_table td{
-	        			padding: 5px 0 5px 20px;
+	        			padding: 5px 15px 5px 5px;
 	        			font-size: 14px;
 	        			vertical-align: top;
-	        			word-break:break-all;
+	        			/*word-break:break-all;*/
+                        /*text-align: justify;
+                        text-justify: distribute-all-lines;
+                        text-align-last: justify;*/
 	        		}
 	        		.contact_table th{
 	        			text-align: left;
@@ -447,7 +450,8 @@ body.homepage{background: url('../im/home_body_bg.jpg') 0 0 repeat-x;}
 	        		.contact_table td:first-child{
 	        			text-align: right;
 	        			font-weight: bold;
-	        			padding-left: 0;
+                        padding-left: 0;
+                        padding-right: 0;
 	        			white-space:nowrap;
 	        		}
 	        		.tab_box .contact_table{}
